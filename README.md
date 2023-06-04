@@ -1,6 +1,4 @@
-﻿
-
-<div align="center"><img src="img/hertaa_github.gif"></div>
+﻿<div align="center"><img src="img/hertaa_github.gif"></div>
 
 <div align="center"><p>The website for Herta, the cutest genius Honkai: Star Rail character out there!</p>
 <p>献给崩坏：星穹铁道最可爱的天才黑塔酱</p></div>
@@ -8,8 +6,7 @@
   [![Chat on Discord](https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord)](https://discord.gg/yzkEz6xxdM)
 
 # Herta Kuru | 黑塔转圈圈 | ヘルタクルへ
-[Home Page | 主页 | ホーム ページ (Netlify)](https://herta.ft2.ltd/)
-[(BACKUP: via GitHub Pages)](https://duiqt.github.io/herta_kuru/)
+[Home Page | 主页 | ホーム ページ](https://herta.ft2.ltd/)
 
 Herta gif and art made by | 黑塔 gif 绘画者 : [@Seseren_kr](https://twitter.com/Seseren_kr) 
 
