@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+quart = "*"
+uvicorn = "*"
+
+[dev-packages]
+tqdm = "*"
+yapf = "*"
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.2"
+
+[scripts]
+webapp_debug = "python webapp.py"
+webapp = "python main.py"

@@ -22,15 +22,15 @@
                 "dialogs-close": "Close",
                 "dialogs-credits-title": "Credits"
             },
-            cardImage: "img/card_en.jpg"
+            cardImage: "static/img/card_en.jpg"
         }, "cn": {
             audioList: [
                 // TODO audio random weight
-                "audio/cn/gululu.mp3",
-                "audio/cn/gururu.mp3",
-                "audio/cn/转圈圈.mp3",
-                "audio/cn/转圈圈咯.mp3",
-                "audio/cn/要坏掉了.mp3"
+                "static/audio/cn/gululu.mp3",
+                "static/audio/cn/gururu.mp3",
+                "static/audio/cn/转圈圈.mp3",
+                "static/audio/cn/转圈圈咯.mp3",
+                "static/audio/cn/要坏掉了.mp3"
             ],
             texts: {
                 "page-title": "黑塔转圈圈",
@@ -48,13 +48,13 @@
                 "dialogs-close": "关闭",
                 "dialogs-credits-title": "制作人员名单"
             },
-            cardImage: "img/card_cn.jpg"
+            cardImage: "static/img/card_cn.jpg"
         },
         "ja": {
             audioList: [
-                "audio/ja/kuruto.mp3",
-                "audio/ja/kuru1.mp3",
-                "audio/ja/kuru2.mp3",
+                "static/audio/ja/kuruto.mp3",
+                "static/audio/ja/kuru1.mp3",
+                "static/audio/ja/kuru2.mp3",
             ],
             texts: {
                 "page-title": "ヘルタクルへようこそ~",
@@ -72,7 +72,7 @@
                 "dialogs-close": "Close",
                 "dialogs-credits-title": "Credits"
             },
-            cardImage: "img/card_ja.jpg"
+            cardImage: "static/img/card_ja.jpg"
         },
         "kr": {
             audioList: null,
@@ -92,7 +92,7 @@
                 "dialogs-close": "Close",
                 "dialogs-credits-title": "Credits"
             },
-            cardImage: "img/card_kr.jpg"
+            cardImage: "static/img/card_kr.jpg"
         },
         "id": {
             audioList: null,
@@ -112,7 +112,7 @@
                 "dialogs-close": "Close",
                 "dialogs-credits-title": "Credits"
             },
-            cardImage: "img/card_id.jpg"
+            cardImage: "static/img/card_id.jpg"
         }
     };
 
@@ -208,8 +208,8 @@
     };
 
     // try caching the hertaa1.gif and hertaa2.gif images by calling the tryCacheUrl function
-    tryCacheUrl("img/hertaa1.gif");
-    tryCacheUrl("img/hertaa2.gif");
+    tryCacheUrl("static/img/hertaa1.gif");
+    tryCacheUrl("static/img/hertaa2.gif");
 
     // Define a function that takes an array as an argument and returns a random item from the array
     function randomChoice(myArr) {
@@ -257,7 +257,7 @@
         let id = null;
         const random = Math.floor(Math.random() * 2) + 1;
         const elem = document.createElement("img");
-        elem.src = tryCacheUrl(`img/hertaa${random}.gif`);
+        elem.src = tryCacheUrl(`static/img/hertaa${random}.gif`);
         elem.style.position = "absolute";
         elem.style.right = "-500px";
         elem.style.top = counterButton.getClientRects()[0].bottom + scrollY - 430 + "px"
@@ -270,15 +270,13 @@
         id = setInterval(() => {
             if (pos >= limit) {
                 clearInterval(id);
-                elem.remove()
+                elem.remove();
             } else {
                 pos += 20;
                 elem.style.right = pos + 'px';
             }
         }, 12);
     };
-
-
 
     // This function creates ripples on a button click and removes it after 300ms.
     function triggerRipple(e) {
@@ -312,19 +310,19 @@
     };
 
     // This block dynamically displays different messages depending on which hostname the website is being loaded from.
-    if (location.hostname == "herta.ft2.ltd" || location.hostname == "hertakuru.netlify.app") {
-        document.getElementById("access-via-tip-parent").innerHTML = "<p id='access-via-mirror'>Congratulations! You are using a mirror site, which should speed up access within China (Mainland) and some regions. Click here to <a href='https://duiqt.github.io/herta_kuru/'>visit the source site on GitHub Pages</a>.</p>";
-        multiLangMutation();
-    } else {
-        document.getElementById("access-via-tip-parent").innerHTML = "<p id='access-via-pages'>You're currently accessing via GitHub Pages. For users in China (Mainland) or some regions, click <a href='https://duiqt.github.io/herta_kuru/'>here to access the mirror on Netlify</a>.</p>";
-        multiLangMutation();
-    }
+    // if (location.hostname == "herta.ft2.ltd" || location.hostname == "hertakuru.netlify.app") {
+    //     document.getElementById("access-via-tip-parent").innerHTML = "<p id='access-via-mirror'>Congratulations! You are using a mirror site, which should speed up access within China (Mainland) and some regions. Click here to <a href='https://duiqt.github.io/herta_kuru/'>visit the source site on GitHub Pages</a>.</p>";
+    //     multiLangMutation();
+    // } else {
+    //     document.getElementById("access-via-tip-parent").innerHTML = "<p id='access-via-pages'>You're currently accessing via GitHub Pages. For users in China (Mainland) or some regions, click <a href='https://duiqt.github.io/herta_kuru/'>here to access the mirror on Netlify</a>.</p>";
+    //     multiLangMutation();
+    // }
 
     // This function fetches data stored in a JSON file and displays it in a dialog box.
     function showCredits() {
         fetch("credits.json").then(response => response.json()).then((data) => {
             var contributors = data.contributors;
-            contributors = randomShuffle(contributors);
+            contributors = randomShuffle(contributors);  // haha
             var creditsHtmlContent = `<p>in no specific order</p>`;
             creditsHtmlContent += `<ul class="mdui-list">`;
             for (let i = 0; i < contributors.length; i++) {

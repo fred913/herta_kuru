@@ -1,0 +1,23 @@
+{
+    "editor.fontFamily": "'Consolas', 'monospace', monospace, 'Noto Sans CJK SC'",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "yapf",
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ],
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.diagnosticMode": false,
+    "liveshare.focusBehavior": "accept",
+    "liveshare.languages.allowGuestCommandControl": true,
+    "liveshare.launcherClient": "visualStudioCode",
+    "liveshare.keepAliveInterval": 6,
+    "liveshare.notebooks.allowGuestExecuteCells": true,
+    "liveshare.publishWorkspaceInfo": true,
+    "liveshare.guestApprovalRequired": false,
+    "liveshare.anonymousGuestApproval": "prompt",
+    "liveshare.featureSet": "insiders"
+}
