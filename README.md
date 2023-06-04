@@ -1,4 +1,7 @@
-﻿<div align="center"><img src="img/hertaa_github.gif"></div>
+﻿## Warning
+The counter has paused, awaiting additional remediation measures, as a result of the excessive traffic and malicious flood of requests.
+
+<div align="center"><img src="img/hertaa_github.gif"></div>
 
 <div align="center"><p>The website for Herta, the cutest genius Honkai: Star Rail character out there!</p>
 <p>献给崩坏：星穹铁道最可爱的天才黑塔酱</p></div>
