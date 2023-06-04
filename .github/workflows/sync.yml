@@ -37,10 +37,3 @@ jobs:
         run: |
           echo "::error::Due to insufficient permissions, synchronization failed (as expected). Please go to the repository homepage and manually perform [Sync fork]."
           exit 1
-          jobs:
-          
-      - name: Trigger build on Netlify
-        id: getRequest
-        uses: skgandikota/FetchUrl@v1.3
-        with:
-          url: ${{ secrets.NETLIFY_TRIGGER_URL }}
